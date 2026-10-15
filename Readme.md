@@ -25,6 +25,20 @@ Configuration:
 Performance:
     Data Layer: within 5min with shorter time available on better cluster setting.
     Aggregation Layer: ~1:30min for 4600 rows 
+
+Database structure:
+    Staging
+       - campaign_metadata
+       - meta_ads_daily
+       - google_ads_daily
+       - store_visits
+    Staging_mid
+       - Automapping_Step1
+       - Automapping_Step2
+       - Automapping_Unmapped
+    Staging_final (Not utilize for this version)
+       - final_standard_table
+
 **********************************
 
 Answer to question Q1-Q4 please see docx
