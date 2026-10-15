@@ -1,0 +1,82 @@
+{
+  "google_ads_daily": {
+    "status": "active",
+    "timezone": "UTC",
+    "type":"ad",
+    "mapping_key":["Date","Campaign_ID","Channel"],
+    "mapping": {
+      "dimensions": [
+        ["date", "Date"],
+        ["timestamp_utc", "Time"],
+        ["campaign_id", "Campaign_ID"],
+        ["campaign_name", "Campaign_Name"],
+        ["campaign_advertising_channel_type", "Channel"]
+      ],
+      "measurements": [
+        ["metrics_impressions", "Impressions"],
+        ["metrics_clicks", "Clicks"],
+        ["metrics_cost_micros", "Spend_micro"],
+        ["metrics_conversions", "Conversions"],
+        ["metrics_conversions_value_micros", "Conversions_spend_micro"]
+      ]
+    }
+  },
+  "meta_ads_daily": {
+    "status": "active",
+    "timezone": "America/Los_Angeles",
+    "type":"ad",
+    "mapping_key":["Date","Campaign_ID","Channel","Adset_ID","Ad_ID","Placement"],
+    "mapping": {
+      "dimensions": [
+        ["date", "Date"],
+        ["timestamp_pst", "Time"],
+        ["campaign_id", "Campaign_ID"],
+        ["campaign_name", "Campaign_Name"],
+        ["adset_id", "Adset_ID"],
+        ["ad_id", "Ad_ID"],
+        ["objective", "Channel"],
+        ["placement", "Placement"],
+        ["currency", "Currency"]
+      ],
+      "measurements": [
+        ["impressions", "Impressions"],
+        ["clicks", "Clicks"],
+        ["spend_usd", "Spend"],
+        ["conversions", "Conversions"],
+        ["conversion_value_usd", "Conversions_spend"]
+      ]
+    }
+  },
+  "store_visits": {
+    "status": "active",
+    "type":"metadata",
+    "mapping": {
+      "dimensions": [
+        ["date", "Date"],
+        ["dma_code", "DMA_ID"],
+        ["dma_name", "DMA_Name"]
+      ],
+      "measurements": [
+        ["attributed_visits", "Visits"],
+        ["attribution_window_days", "Window_Day"]
+      ]
+    }
+  },
+  "campaign_metadata": {
+    "status": "active",
+    "type":"metadata",
+    "mapping": {
+      "dimensions": [
+        ["campaign_id", "Campaign_ID"],
+        ["brand", "Client"],
+        ["product_line", "Product"],
+        ["region", "Region"],
+        ["campaign_start_date", "Campaign_Start_Date"],
+        ["campaign_end_date", "Campaign_End_Date"]
+      ],
+      "measurements": [
+        ["budget_usd", "Budget"]
+      ]
+    }
+  }
+}
